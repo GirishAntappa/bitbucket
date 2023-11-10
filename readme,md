@@ -1,0 +1,6 @@
+docker run -v /path/to/bitbucket/data:/var/atlassian/application-data/bitbucket \
+    --name="bitbucket" -d -p your_desired_ip_address:7990:7990 atlassian/bitbucket-server
+
+/path/to/bitbucket/data/shared/bitbucket.xml
+
+<Connector port="7990" connectionTimeout="20000" redirectPort="8443" address="your_desired_ip_address" />
